@@ -7,17 +7,18 @@ from ibm_watson import LanguageTranslatorV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 from dotenv import load_dotenv
 
+
 load_dotenv()
 
-apikey = os.environ['apikey']
-url = os.environ['url']
+apikey = 'QhW4KDhNMEGsBeDq51rSLGTey05CNFGuRf_8'
+url = 'https://api.eu-gb.language-translator.watson.cloud.ibm.com/instances/8104ef54-03ea-4c9b-8782-ca5844ed5b51'
 
-authenticator = IAMAuthenticator(apikey)
+authenticator = IAMAuthenticator('QhW4KDhNMEGsBeDq51rSLGTey05CNFGuRf_8-zwNNEkm')
 language_translator = LanguageTranslatorV3(
     version='2018-05-01',
     authenticator=authenticator
 )
-language_translator.set_service_url(url)
+language_translator.set_service_url('https://api.eu-gb.language-translator.watson.cloud.ibm.com/instances/8104ef54-03ea-4c9b-8782-ca5844ed5b51')
 
 
 def english_to_french(english_text):
@@ -45,7 +46,7 @@ def french_to_english(french_text):
     return english_text
 
 # TEXT='Hello'
-# french=english_to_french(text)
+# french=english_to_french(TEXT)
 # print(french)
 # english=french_to_english(french)
 # print(english)

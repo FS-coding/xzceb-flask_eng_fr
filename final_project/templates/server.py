@@ -22,6 +22,6 @@ def fremch_to_english():
 def renderIndexPage():
     return render_template('index.html')
 
-if __name__=="__main__":
+if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080) 
     # When no port is specified, starts at default port 5000
