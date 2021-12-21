@@ -10,15 +10,15 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-apikey = 'QhW4KDhNMEGsBeDq51rSLGTey05CNFGuRf_8'
-url = 'https://api.eu-gb.language-translator.watson.cloud.ibm.com/instances/8104ef54-03ea-4c9b-8782-ca5844ed5b51'
+apikey = '---'
+url = '---'
 
-authenticator = IAMAuthenticator('QhW4KDhNMEGsBeDq51rSLGTey05CNFGuRf_8-zwNNEkm')
+authenticator = IAMAuthenticator('-----')
 language_translator = LanguageTranslatorV3(
     version='2018-05-01',
     authenticator=authenticator
 )
-language_translator.set_service_url('https://api.eu-gb.language-translator.watson.cloud.ibm.com/instances/8104ef54-03ea-4c9b-8782-ca5844ed5b51')
+language_translator.set_service_url('---')
 
 
 def english_to_french(english_text):
